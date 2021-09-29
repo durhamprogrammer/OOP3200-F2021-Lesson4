@@ -15,28 +15,6 @@
 
 int main()
 {
-	//try
-	//{
-	//	float scalar = 1.5f;
-
-	//	// getting input from the console into our vector 2 object
-	//	std::cout << "Please enter the Origin Vector 2:" << std::endl;
-	//	Vector2D origin;
-	//	std::cin >> origin;
-
-	//	std::cout << "Please enter the First Point Vector 2:" << std::endl;
-	//	Vector2D first;
-	//	std::cin >> first;
-
-	//	const float distance = Vector2D::Distance(origin, first);
-
-	//	std::cout << "\nThe Distance between: " << origin << " and " << first << " is " << distance << " units." << std::endl;
-	//}
-	//catch (std::exception& exception)
-	//{
-	//	std::cerr << exception.what() << " Ending Program" << std::endl;
-	//}
-
 	// create an empty vector of Transform shape
 	std::vector<Transform> objects;
 
@@ -59,6 +37,11 @@ int main()
 		std::cout << "-----------------------------\n" << std::endl;
 		counter++;
 	}
+
+	float speed = 10.0f;
+	std::cout << "Object# 1 " << std::endl;
+	objects[0].position = objects[0].position + Vector2D::Up() * speed;
+	std::cout << objects[0].position << std::endl;
 }
 
 
